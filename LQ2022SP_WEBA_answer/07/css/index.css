@@ -1,0 +1,95 @@
+[v-cloak] {
+  display: none;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: Microsoft YaHei;
+}
+
+li {
+  list-style: none;
+}
+
+.bar {
+  background-color: #347eee;
+  border-radius: 2px;
+  width: 580px;
+  padding: 10px;
+  margin: 45px auto 25px;
+  position: relative;
+  text-align: right;
+  line-height: 1;
+}
+
+.bar a {
+  background: #6c757d center center no-repeat;
+  width: 32px;
+  height: 32px;
+  display: inline-block;
+  text-decoration: none !important;
+  margin-right: 5px;
+  border-radius: 2px;
+  cursor: pointer;
+}
+
+.bar a.active {
+  background-color: #f66;
+}
+
+.bar a.list-icon {
+  background-image: url(../images/list.png);
+}
+
+.bar a.grid-icon {
+  background-image: url(../images/big.png);
+}
+
+ul.grid {
+  width: 570px;
+  margin: 0 auto;
+  text-align: left;
+}
+
+ul.grid li {
+  padding: 2px;
+  float: left;
+}
+
+ul.grid li img {
+  width: 280px;
+  object-fit: cover;
+  display: block;
+  border: none;
+}
+
+ul.list {
+  width: 500px;
+  margin: 0 auto;
+  text-align: left;
+}
+
+ul.list li {
+  border-bottom: 1px solid #ddd;
+  padding: 10px;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+}
+
+ul.list li img {
+  /* width: 120px; */
+  height: 120px;
+  float: left;
+  border: none;
+}
+
+ul.list li p {
+  font-weight: bold;
+  color: #6e7a7f;
+  padding-left: 15px;
+}

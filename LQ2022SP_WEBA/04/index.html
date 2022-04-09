@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>灯的颜色变化</title>
+    <style>
+      #container {
+        text-align: center;
+      }
+      #redlight,
+      #greenlight {
+        display: none;
+      }
+
+      #defaultlight {
+        display: inline-block;
+      }
+    </style>
+  </head>
+
+  <body>
+    <div id="container">
+      <img id="defaultlight" src="./images/light.svg" alt="" />
+
+      <img id="redlight" src="./images/redlight.svg" alt="" />
+      <img id="greenlight" src="./images/greenlight.svg" alt="" />
+    </div>
+    <script src="./js/trafficlights.js"></script>
+  </body>
+</html>

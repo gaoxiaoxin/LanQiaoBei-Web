@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>布局切换</title>
+    <script type="text/javascript" src="./js/vue.js"></script>
+    <link rel="stylesheet" type="text/css" href="./css/index.css" />
+    <script
+      src="./js/axios.min.js"
+      type="text/javascript"
+      charset="utf-8"
+    ></script>
+  </head>
+  <body>
+    <div id="app" v-cloak>
+      <!-- TODO：请在下面实现需求 -->
+      <div class="bar">
+        <a
+          :class="['grid-icon', isChange ? '': 'active']"
+          @click="ChangeList(0)"
+        ></a>
+        <a
+          :class="['list-icon', isChange ? 'active' : '']"
+          @click="ChangeList(1)"
+        ></a>
+      </div>
+      <!--grid 示例代码，动态渲染时可删除-->
+      <ul class="list" v-if="isChange">
+        <li v-for="(item, index) in goodsList" :key="index">
+          <a :href="item.url" target="_blank">
+            <img :src="item.image.small"
+          /></a>
+          <p>{{item.title}}</p>
+        </li>
+      </ul>
+      <ul class="grid" v-else>
+        <li v-for="(item, index) in goodsList" :key="index">
+          <a :href="item.url" target="_blank">
+            <img :src="item.image.large"
+          /></a>
+        </li>
+      </ul>
+    </div>
+  </body>
+</html>
+<script type="text/javascript">
+  var vm = new Vue({
+    el: "#app",
+    data: {
+      goodsList: [],
+      isChange: false,
+    },
+    methods: {
+      ChangeList(num) {
+        if (num == 0) {
+          this.isChange = false;
+        } else {
+          this.isChange = true;
+        }
+      },
+      async getListData() {
+        const { data: res } = await axios.get("./goodsList.json");
+        this.goodsList = res;
+        console.log(this.goodsList);
+      },
+    },
+    mounted() {
+      // TODO：补全代码实现需求
+      this.getListData();
+    },
+  });
+</script>

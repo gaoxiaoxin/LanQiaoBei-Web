@@ -1,0 +1,43 @@
+#box {
+  width: 300px;
+  height: 440px;
+  margin: 100px auto;
+  position: relative;
+}
+
+#item1,
+#item12 {
+  background-color: #90e0ef;
+}
+#item2,
+#item8 {
+  background-color: #8bdb81;
+}
+#item3,
+#item10 {
+  background-color: yellowgreen;
+}
+#item4,
+#item6 {
+  background-color: skyblue;
+}
+#item5,
+#item9 {
+  background-color: #d9d7f1;
+}
+#item7,
+#item11 {
+  background-color: #fed1f1;
+}
+#box div {
+  width: 100%;
+  height: 400px;
+  transition: all 1.5s;
+  position: absolute;
+  left: 0;
+  top: 0;
+  /*旋转时，以盒子底部的中心为坐标原点*/
+  transform-origin: center bottom;
+  box-shadow: 0 0 3px 0 #666;
+}
+/*TODO：请补充 CSS 代码*/

@@ -1,0 +1,184 @@
+html,
+body,
+div,
+span,
+applet,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+abbr,
+acronym,
+address,
+big,
+cite,
+code,
+del,
+dfn,
+em,
+font,
+img,
+ins,
+kbd,
+q,
+s,
+samp,
+small,
+strike,
+strong,
+sub,
+sup,
+tt,
+var,
+b,
+u,
+i,
+center,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend {
+  margin: 0;
+  padding: 0;
+  font-size: 100%;
+  border: 0;
+  outline: 0;
+  background: transparent;
+}
+
+ol,
+ul {
+  list-style: none;
+}
+
+:focus {
+  outline: 0;
+}
+
+#content {
+  padding-top: 40px;
+}
+
+#content ul {
+  width: 1200px;
+  margin: 0 auto;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.btnbox {
+  width: 1200px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+#content ul li {
+  margin: 20px;
+  width: 200px;
+  height: 180px;
+}
+
+#content ul li:last-child {
+  margin-right: 0;
+}
+
+#content ul li a {
+  position: relative;
+  display: block;
+  width: 100%;
+  height: 100%;
+  perspective: 800px;
+}
+
+#content ul li a > div {
+  position: absolute;
+  left: 0;
+  height: 0;
+  width: 100%;
+  height: 100%;
+  color: #fff;
+  overflow: hidden;
+
+  transform-style: preserve-3d;
+
+  transition: 0.8s ease-in-out;
+  backface-visibility: hidden;
+}
+
+#content ul li a div:first-child {
+  display: flex;
+  justify-content: center;
+  transform: rotateY(0);
+  z-index: 2;
+  border: 1px solid #2e7eee;
+}
+
+#content ul li a div:last-child {
+  background: rgb(0, 188, 212);
+  transform: rotateY(180deg);
+  z-index: 1;
+}
+
+#content ul li a div h1 {
+  text-align: center;
+  line-height: 180px;
+  font-size: 26px;
+}
+
+#content ul li a div img {
+  max-width: 100%;
+}
+
+.rotatey180 {
+  transform: rotateY(-180deg) !important;
+}
+
+.rotateyzero {
+  transform: rotateY(0) !important;
+}
+
+.btn,
+.btn-all {
+  margin-top: 60px;
+  display: inline-block;
+  color: #0099cc;
+  background: #2e7eee;
+  border-radius: 10px;
+  text-decoration: none;
+  text-transform: uppercase;
+  border: none;
+  color: white;
+  padding: 8px 16px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  transition-duration: 0.4s;
+  cursor: pointer;
+}
+
+.cardnum {
+  position: absolute;
+  font-size: 20px;
+  left: 10px;
+  top: 10px;
+}
+
+#gameText {
+  text-align: center;
+}

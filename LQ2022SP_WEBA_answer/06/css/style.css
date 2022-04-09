@@ -1,0 +1,102 @@
+/*
+ TODO：请补充代码
+*/
+* {
+  margin: 0px;
+  padding: 0px;
+}
+body {
+  background-color: #a6b1e1;
+}
+#header {
+  height: 46px;
+  margin-top: 13px;
+  width: 1024px;
+  display: flex;
+  align-items: center;
+  margin: 13px auto 0;
+}
+#header .logo {
+  font-size: 18px;
+  color: white;
+  margin-right: 365px;
+}
+#header .lists span {
+  font-size: 16px;
+  color: white;
+  margin-right: 16px;
+}
+#head_text {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  height: 427px;
+}
+#head_text .title {
+  font-size: 45px;
+  color: black;
+  margin-top: 30px;
+}
+#head_text .text_content {
+  margin-top: 62px;
+  color: white;
+  font-size: 21px;
+  font-weight: 200;
+}
+#head_text .head_btn {
+  color: #efbfbf;
+  font-size: 18px;
+  width: 100px;
+  height: 45px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 36px;
+  border-radius: 2px;
+  box-shadow: inset 0 0 0 2px #efbfbf;
+}
+#content {
+  background-color: white;
+  border: 1px solid transparent;
+  height: 376px;
+}
+#content .text_lists {
+  width: 1024px;
+  margin: 74px auto 0px;
+  display: flex;
+  flex-wrap: wrap;
+  height: 302px;
+}
+#content .text_lists .item {
+  width: 502px;
+}
+#content .text_lists .item .item_title {
+  font-size: 30px;
+  font-weight: 200;
+  color: black;
+}
+#content .text_lists .item .item_text {
+  font-size: 18px;
+  color: #aaa;
+  line-height: 1.4em;
+}
+#content .text_lists .item:nth-child(1) {
+  margin-right: 20px;
+}
+#content .text_lists .item:nth-child(3) {
+  margin-right: 20px;
+}
+#footer {
+  height: 80px;
+  background-color: white;
+  font-size: 14px;
+  border: 1px solid transparent;
+  color: #aaa;
+  text-align: center;
+}
+#footer .footer_logo_text {
+  margin-top: 30px;
+}
+#footer .footer_text {
+  margin-top: 10px;
+}

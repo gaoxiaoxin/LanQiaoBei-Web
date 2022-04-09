@@ -1,0 +1,81 @@
+#box {
+  width: 300px;
+  height: 440px;
+  margin: 100px auto;
+  position: relative;
+}
+#box:hover #item1{
+  transform:rotate(-60deg);
+}
+#box:hover #item2{
+  transform:rotate(-50deg);
+}
+#box:hover #item3{
+  transform:rotate(-40deg);
+}
+#box:hover #item4{
+  transform:rotate(-30deg);
+}
+#box:hover #item5{
+  transform:rotate(-20deg);
+}
+#box:hover #item6{
+  transform:rotate(-10deg);
+}
+
+/* 顺时针 */
+#box:hover #item7{
+  transform:rotate(10deg);
+}
+#box:hover #item8{
+  transform:rotate(20deg);
+}
+#box:hover #item9{
+  transform:rotate(30deg);
+}
+#box:hover #item10{
+  transform:rotate(40deg);
+}
+#box:hover #item11{
+  transform:rotate(50deg);
+}
+#box:hover #item12{
+  transform:rotate(60deg);
+}
+
+#item1,
+#item12 {
+  background-color: #90e0ef;
+}
+#item2,
+#item8 {
+  background-color: #8bdb81;
+}
+#item3,
+#item10 {
+  background-color: yellowgreen;
+}
+#item4,
+#item6 {
+  background-color: skyblue;
+}
+#item5,
+#item9 {
+  background-color: #d9d7f1;
+}
+#item7,
+#item11 {
+  background-color: #fed1f1;
+}
+#box div {
+  width: 100%;
+  height: 400px;
+  transition: all 1.5s;
+  position: absolute;
+  left: 0;
+  top: 0;
+  /*旋转时，以盒子底部的中心为坐标原点*/
+  transform-origin: center bottom;
+  box-shadow: 0 0 3px 0 #666;
+}
+/*TODO：请补充 CSS 代码*/

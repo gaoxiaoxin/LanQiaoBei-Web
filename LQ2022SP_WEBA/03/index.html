@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script src="./js/echarts.js"></script>
+    <title>和手机相处的时光</title>
+  </head>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+    }
+
+    #main {
+      margin: 20px;
+      background-color: white;
+    }
+  </style>
+
+  <body>
+    <div id="main" style="width: 1000px; height: 600px"></div>
+  </body>
+  <script>
+    var chartDom = document.getElementById("main");
+    var myChart = echarts.init(chartDom);
+    /*TODO：ECharts 的配置中存在错误，请改正*/
+    var option = {
+      title: {
+        text: "一周的手机使用时长",
+      },
+      xAxis: {
+        type: "value",
+        data: ["周一", "周二", "周三", "周四", "周五", "周六", "周日"],
+      },
+      yAxis: {
+        type: "category",
+      },
+      series: [
+        {
+          data: [2.5, 2, 2.6, 3.2, 4, 6, 5],
+          type: "line",
+        },
+      ],
+    };
+    myChart.setOption(option);
+  </script>
+</html>

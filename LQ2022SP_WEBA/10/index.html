@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>课程列表</title>
+    <script src="./js/axios.js"></script>
+    <link rel="stylesheet" href="./css/bootstrap.css" />
+    <style>
+      * {
+        outline: none;
+      }
+
+      h1 {
+        text-align: center;
+      }
+    </style>
+  </head>
+
+  <body>
+    <h1>课程列表</h1>
+
+    <div id="list">
+      <!-- list-group 起始位置  list-group为示例代码，动态渲染时可删除-->
+      <div class="list-group">
+        <a href="#" class="list-group-item list-group-item-action">
+          <div class="d-flex w-100 justify-content-between">
+            <h5 class="mb-1">带你从入门到实战全面掌握 uni-app</h5>
+            <small>89.00元</small>
+          </div>
+          <p class="mb-1">
+            本课程将带读者使用 uni-app
+            技术栈，开发一个具有前后端的完整实战项目，让读者在实践中学习，在学习中夯实开发能力。读者将学到登录、注册、修改个人信息等基础功能的开发知识，也能学到发布、创建、删除待办事项、动态发帖等核心功能的编程思想。纸上得来终觉浅，得知此事要躬行。一起实践下吧！
+          </p>
+        </a>
+      </div>
+      <!-- list-group 结束位置 -->
+    </div>
+    <div class="container">
+      <div class="row">
+        <div class="col-6">
+          <nav aria-label="Page navigation">
+            <ul class="pagination">
+              <li id="prev" class="page-item disabled">
+                <a class="page-link" href="javascript:void(0)">上一页</a>
+              </li>
+              <li id="next" class="page-item">
+                <a class="page-link" href="javascript:void(0)">下一页</a>
+              </li>
+            </ul>
+          </nav>
+        </div>
+        <div class="col">
+          <div id="pagination"></div>
+        </div>
+      </div>
+    </div>
+  </body>
+  <script src="./js/index.js"></script>
+</html>

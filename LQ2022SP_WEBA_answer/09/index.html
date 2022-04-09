@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>寻找小狼人</title>
+    <meta charset="utf-8" />
+    <link href="css/style.css" rel="stylesheet" type="text/css" />
+  </head>
+
+  <body>
+    <div id="content">
+      <p id="gameText"></p>
+      <ul></ul>
+      <div class="btnbox">
+        <button class="btn">寻找狼人</button>
+      </div>
+    </div>
+    <script src="./js/myarray.js"></script>
+    <script>
+      let content = document.querySelector("#content ul");
+      let cardList = [
+        {
+          id: 1,
+          category: "werewolf",
+          name: "小狼人",
+        },
+        {
+          id: 2,
+          category: "werewolf",
+          name: "小狼人",
+        },
+        {
+          id: 3,
+          category: "hunter",
+          name: "猎人",
+        },
+        {
+          id: 4,
+          category: "poor",
+          name: "平民",
+        },
+        {
+          id: 5,
+          category: "witch",
+          name: "女巫",
+        },
+        {
+          id: 6,
+          category: "prophet",
+          name: "预言家",
+        },
+        {
+          id: 7,
+          category: "poor",
+          name: "平民",
+        },
+        {
+          id: 8,
+          category: "werewolf",
+          name: "黑狼王",
+        },
+        {
+          id: 9,
+          category: "poor",
+          name: "平民",
+        },
+      ];
+      for (let index = 0; index < cardList.length; index++) {
+        const element = cardList[index];
+        content.innerHTML += `<li>
+                <a href="javascript:void(0)">
+                    <div class="z">
+                     <img src="./images/card.svg" alt="">
+                    </div>
+                    <div class="b">
+                        <h1>${element.name}</h1>
+                    </div>
+                </a>
+            </li>`;
+      }
+      let gameText = document.querySelector("#gameText");
+      let color = ["♠", "❤", "♣", "♦"];
+      function newHtml() {
+        content.innerHTML = "";
+        let newcardList = cardList.myarray(
+          (item) => item.category == "werewolf"
+        );
+        for (let index = 0; index < newcardList.length; index++) {
+          let randomColor = color[Math.floor(Math.random() * color.length)];
+          const element = newcardList[index];
+          content.innerHTML += `<li>
+                <a href="javascript:void(0)">
+                    <div class="z">
+                        <img src="./images/card.svg" alt="">
+                    </div>
+                    <div class="b">
+                       <span class='cardnum'>${randomColor} ${element.id} </span>
+                        <h1>
+                           ${element.name}
+                        </h1>
+                    </div>
+                </a>
+            </li>`;
+        }
+        gameText.innerHTML = `恭喜你，成功找出${newcardList.length}个狼人!`;
+      }
+
+      let btnbox = document.querySelector(".btn");
+      btnbox.addEventListener("click", function () {
+        newHtml();
+        let domb = document.querySelectorAll(".b");
+        let domz = document.querySelectorAll(".z");
+        setTimeout(() => {
+          for (let index = 0; index < domb.length; index++) {
+            const dombelement = domb[index];
+            const domzelement = domz[index];
+            dombelement.classList.add("rotateyzero");
+            domzelement.classList.add("rotatey180");
+          }
+        }, 200);
+      });
+    </script>
+  </body>
+</html>
