@@ -61,7 +61,6 @@
       async getListData() {
         const { data: res } = await axios.get("./goodsList.json");
         this.goodsList = res;
-        console.log(this.goodsList);
       },
     },
     mounted() {

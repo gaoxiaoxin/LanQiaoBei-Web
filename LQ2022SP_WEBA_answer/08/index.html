@@ -64,16 +64,14 @@
                   goods.num = 1;
                   this.cartList.push(goods)
                 } else {
-                  for(let i = 0; i < this.cartList.length ; i ++ ) {
-                    if(this.cartList[i].id == goods.id) {
-                      index = i
-                    }
-                  }
+                  // 比赛后查文档写的, 对文档还是不熟练
+                  index = this.cartList.findIndex((item) => {
+                    return item.id == goods.id
+                  })
                   if(index == -1) {
                     goods.num = 1;
                     this.cartList.push(goods)
                   }else {
-                    console.log('ss');
                     this.cartList[index].num ++ 
                   }
                 }
@@ -85,11 +83,9 @@
                   return
                 }else {
                   let index = -1;
-                  for(let i = 0; i < this.cartList.length ; i ++ ) {
-                    if(this.cartList[i].id == goods.id) {
-                      index = i
-                    }
-                  }
+                  index = this.cartList.findIndex((item) => {
+                    return item.id == goods.id
+                  })
                   if(this.cartList[index].num === 1) {
                     this.cartList.splice(index, 1);
                   }else {
@@ -97,6 +93,7 @@
                   }
                 }
             }
+            
         }
     });
 </script>

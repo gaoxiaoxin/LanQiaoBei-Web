@@ -4,7 +4,7 @@ let maxPage; // 最大页数
 let ListData = []
 let carlist = []
 async function addData() {
-  const { data: res } = await axios.get('../../10/js/carlist.json')
+  const { data: res } = await axios.get('js/carlist.json')
   ListData = res
   maxPage = Math.floor(ListData.length / 5) + 1
   carlist = ListData.slice((pageNum - 1) * 5, pageNum * 5)
@@ -21,7 +21,7 @@ function addNode(array = carlist) {
       <a href="#" class="list-group-item list-group-item-action">
           <div class="d-flex w-100 justify-content-between">
             <h5 class="mb-1">${array[i].name}</h5>
-            <small>${array[i].price}</small>
+            <small>${array[i].price}元</small>
           </div>
           <p class="mb-1">
             ${array[i].description}
