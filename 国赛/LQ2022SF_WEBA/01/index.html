@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <title>分一分</title>
+    <style type="text/css">
+      .main div {
+        height: 40px;
+        line-height: 40px;
+      }
+      #sliceNum {
+        width: 30px;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="main">
+      <div class="old-array">
+        <span class="left">当前测试数组：</span>
+        <span id="oldArray"></span>
+      </div>
+      <div class="split-num">
+        <span class="left">请输入分割后子数组的长度：</span>
+        <input type="number" id="sliceNum" value="2" min="1" />
+      </div>
+      <div>
+        <button type="button" onclick="getNew()">点我分割数组</button>
+      </div>
+      <div>
+        <span class="left">分割后的数组：</span>
+        <span id="newArr"></span>
+      </div>
+    </div>
+  </body>
+  <script type="text/javascript" src="./js/index.js"></script>
+  <script type="text/javascript">
+    var oldArr = [22, 23, 34, 4, 5, 6, 76, 8, 91, 10, 11, 12];
+    document.getElementById("oldArray").innerText = JSON.stringify(oldArr);
+    function getNew() {
+      var num = parseInt(document.querySelector("#sliceNum").value);
+      var newA = splitArray(oldArr, num);
+      document.querySelector("#newArr").innerHTML = JSON.stringify(newA);
+    }
+  </script>
+</html>

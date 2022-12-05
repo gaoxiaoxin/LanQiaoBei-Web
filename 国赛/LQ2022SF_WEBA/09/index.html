@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>JSON 生成器</title>
+    <link rel="stylesheet" href="./css/default.min.css" />
+    <script src="./js/highlight.min.js"></script>
+    <script>
+      hljs.highlightAll();
+    </script>
+  </head>
+
+  <body>
+    <div class="btnbox" id="btnbox">
+      <button class="btn" onclick="generate()">生成json</button>
+    </div>
+    <div class="con">
+      <div class="left">
+        <textarea id="myTextarea" name="myTextarea"> </textarea>
+      </div>
+      <div>
+        <pre>
+            <code id="code " class="language-js "></code>
+            </pre>
+      </div>
+    </div>
+    <script>
+      let myTextarea = document.getElementById("myTextarea");
+      myTextarea.innerHTML = `[
+  '{{repeat(2, 3)}}',
+  {
+    isActive: '{{bool()}}',
+    age: '{{integer(20, 40)}}',
+    num:2,
+    boolean:true,
+    str:'str',
+    isTel:'{{bool}}',
+    fn:'{{fn()}}'
+   }
+]`;
+      let code = document.getElementById("code ");
+      let lastData;
+      // 点击生成按钮生成对应的 JSON
+      function generate() {
+        let str = myTextarea.value.replace(/\s*/g, "");
+        var jsonData = new Function("return" + str)();
+        lastData = generateData(jsonData);
+        let jsonCode = JSON.stringify(lastData, null, 2); // 设置 tab 为两个空格
+        code.innerHTML = jsonCode;
+        hljs.highlightAll();
+      }
+    </script>
+    <script src="./js/index.js "></script>
+  </body>
+</html>

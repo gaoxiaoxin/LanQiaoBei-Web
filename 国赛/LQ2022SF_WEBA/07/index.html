@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <title>一起会议吧</title>
+    <link rel="stylesheet" type="text/css" href="./css/index.css" />
+    <link rel="stylesheet" href="./css/iconfont/iconfont.css" />
+  </head>
+  <body>
+    <div id="app">
+      <!-- TODO：请在下面实现需求 -->
+      <!-- 登录/注销窗口 -->
+      <div class="login">
+        <div class="left-tools">
+          <a class="close-btn"></a>
+          <a class="shrink-btn"></a>
+        </div>
+        <h3>登录</h3>
+        <p>
+          选择用户：<select id="selectUser">
+            <option value="1">Tom</option>
+          </select>
+        </p>
+        <p>当前用户为：Tom</p>
+
+        <a class="login-btn">登录</a>
+      </div>
+
+      <!-- 右侧显示用户列表窗口按钮 -->
+      <button id="show" class="right-btn">
+        <span class="iconfont icon-left-arrow"></span>
+      </button>
+
+      <!-- 用户列表窗口 -->
+      <div class="user-dialog">
+        <!-- 用户列表窗口上侧工具栏 -->
+        <ul class="tools">
+          <li class="tools-left">
+            <button>
+              <span class="iconfont icon-close"></span>
+            </button>
+            <button>
+              <span class="iconfont icon-dialog"></span>
+            </button>
+            <button class="active">
+              <span class="iconfont icon-list"></span>
+            </button>
+          </li>
+          <li class="tools-right">
+            <button class="show-list">
+              <span class="iconfont icon-retract"></span>
+            </button>
+          </li>
+        </ul>
+
+        <!-- 用户列表 -->
+        <ul class="say-list">
+          <li>
+            <span class="iconfont icon-microphone"></span>
+          </li>
+          <li class="line"></li>
+          <li>正在讲话：Tom；</li>
+        </ul>
+        <ul class="user-list">
+          <li>
+            <img class="header" src="./images/header1.png" />
+            <div class="user-name">
+              <span class="iconfont icon-user header-icon"></span>
+              <span class="iconfont icon-microphone"></span>
+              Tom
+            </div>
+          </li>
+          <li>
+            <img class="header" src="./images/header2.png" />
+            <div class="user-name">
+              <span class="iconfont icon-microphone"></span>
+              Lily
+            </div>
+          </li>
+        </ul>
+      </div>
+    </div>
+    <script type="text/javascript" src="./js/vue.js"></script>
+    <script type="text/javascript" src="./js/axios.min.js"></script>
+    <script type="text/javascript">
+      console.log(this.axios);
+      // TODO：请在下面实现需求
+      var vm = new Vue({
+        el: "#app",
+        data: {
+
+        },
+        created: () => {
+          
+            
+      
+        },
+        methods: {
+          getdata() {
+            
+          }
+        }
+      });
+    </script>
+  </body>
+</html>

@@ -1,0 +1,72 @@
+.container {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  width: 960px;
+  margin: 0 auto;
+}
+
+.item {
+  display: block;
+  width: 66px;
+  height: 66px;
+}
+
+.item img {
+  width: 100%;
+  height: auto;
+}
+
+[class$="box"] {
+  width: 204px;
+  height: 204px;
+  margin: 20px;
+  background-image: linear-gradient(
+    rgb(252, 213, 136) 33.3%,
+    #fff493 0,
+    #fdf45d 66.6%,
+    #f8da47 0
+  );
+  background-size: 6px 6px;
+}
+
+/* TODO：待补充代码 */
+#box1{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+#box2 {
+  display: flex;
+  justify-content: space-between;
+  position: relative;
+}
+
+#box2 .item:nth-child(2){
+  position: absolute;
+  bottom: 0px;
+  right: 0px;
+}
+
+#box3 {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  position: relative;
+}
+#box3 .item:nth-child(1){
+  position: absolute;
+  top: 0px;
+}
+#box3 .item:nth-child(2){
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%,-50%);
+}
+#box3 .item:nth-child(3){
+  position: absolute;
+  bottom: 0px;
+  right: 0px;
+}
+

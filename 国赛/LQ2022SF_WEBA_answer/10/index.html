@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>商城管理系统</title>
+    <meta charset="UTF-8" />
+    <link href="css/bootstrap.min.css" rel="stylesheet" type="text/css" />
+    <link href="css/style.css" rel="stylesheet" type="text/css" />
+  </head>
+  <body class="skin-black">
+    <header class="header">
+      <a href="index.html" class="logo"> 商城管理系统 </a>
+      <nav class="navbar navbar-static-top">
+        <div class="navbar-right">
+          <ul class="nav navbar-nav">
+            <li class="dropdown">
+              <a href="./login.html" class="dropdown-toggle">
+                <span>退出</span>
+              </a>
+            </li>
+          </ul>
+        </div>
+      </nav>
+    </header>
+    <div class="wrapper row-offcanvas row-offcanvas-left">
+      <div class="left-side sidebar-offcanvas">
+        <section class="sidebar">
+          <div class="user-panel">
+            <div class="pull-left image">
+              <img src="images/admin.jpg" class="img-circle" alt="User Image" />
+            </div>
+            <div class="pull-left info">
+              <p id="admin">你好，管理员</p>
+              <a href="#">
+                <i class="text-success">在线</i>
+              </a>
+            </div>
+          </div>
+          <!-- 左侧菜单栏 -->
+          <ul id="sidebarmenu" class="text-success"></ul>
+        </section>
+      </div>
+      <div class="right-side">
+        <section class="content">
+          <div class="row" style="margin-bottom: 5px">
+            <div class="col-md-3">
+              <div class="sm-st clearfix">
+                <span class="sm-block-icon block-red">1</span>
+                <div class="sm-block-info">
+                  <span>3200</span>
+                  商城访问量
+                </div>
+              </div>
+            </div>
+            <div class="col-md-3">
+              <div class="sm-st clearfix">
+                <span class="sm-block-icon block-violet">2</span>
+                <div class="sm-block-info">
+                  <span>2200</span>
+                  售出商品数
+                </div>
+              </div>
+            </div>
+            <div class="col-md-3">
+              <div class="sm-st clearfix">
+                <span class="sm-block-icon block-blue">3</span>
+                <div class="sm-block-info">
+                  <span>100,320</span>
+                  总销售额
+                </div>
+              </div>
+            </div>
+            <div class="col-md-3">
+              <div class="sm-st clearfix">
+                <span class="sm-block-icon block-green">4</span>
+                <div class="sm-block-info">
+                  <span>4567</span>
+                  总利润
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-md-12">
+              <section class="panel">
+                <header class="panel-heading">热销商品</header>
+                <div class="panel-body table-responsive">
+                  <table class="table table-hover">
+                    <thead>
+                      <tr>
+                        <th>#</th>
+                        <th>商品名称</th>
+                        <th>库存</th>
+                        <th>上架时间</th>
+                        <th>状态</th>
+                        <th>售出量</th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      <tr>
+                        <td>1</td>
+                        <td>macbook pro 2021</td>
+                        <td>1000</td>
+                        <td>1/5/2022</td>
+                        <td><span class="label label-info">余量充足</span></td>
+                        <td><span class="badge badge-info">50%</span></td>
+                      </tr>
+                      <tr>
+                        <td>2</td>
+                        <td>macbook pro 2019</td>
+                        <td>3000</td>
+                        <td>06/08/2021</td>
+                        <td><span class="label label-success">已售罄</span></td>
+                        <td><span class="badge badge-success">100%</span></td>
+                      </tr>
+                      <tr>
+                        <td>3</td>
+                        <td>iphone 12</td>
+                        <td>520</td>
+                        <td>10/12/2019</td>
+                        <td><span class="label label-info">余量充足</span></td>
+                        <td><span class="badge badge-info">75%</span></td>
+                      </tr>
+                      <tr>
+                        <td>4</td>
+                        <td>Xiaomi 12 Pro</td>
+                        <td>400</td>
+                        <td>03/22/2022</td>
+                        <td><span class="label label-info">余量充足</span></td>
+                        <td><span class="badge badge-info">65%</span></td>
+                      </tr>
+                      <tr>
+                        <td>5</td>
+                        <td>Hua Wei Meta 40</td>
+                        <td>730</td>
+                        <td>03/11/2022</td>
+                        <td>
+                          <span class="label label-warning">即将售罄</span>
+                        </td>
+                        <td><span class="badge badge-danger">95%</span></td>
+                      </tr>
+                      <tr>
+                        <td>6</td>
+                        <td>Hua Wei Meta V30</td>
+                        <td>300</td>
+                        <td>05/11/2019</td>
+                        <td>
+                          <span class="label label-warning">即将售罄</span>
+                        </td>
+                        <td><span class="badge badge-danger">95%</span></td>
+                      </tr>
+                    </tbody>
+                  </table>
+                </div>
+              </section>
+            </div>
+          </div>
+        </section>
+      </div>
+    </div>
+    <script src="./js/auth.js "></script>
+    <script src="./js/menu.js "></script>
+  </body>
+</html>

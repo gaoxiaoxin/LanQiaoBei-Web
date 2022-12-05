@@ -1,0 +1,89 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+a {
+  display: block;
+  border: 1px solid #0aaef8;
+  width: 135px;
+  height: 30px;
+  line-height: 30px;
+  background-color: #0aaef8;
+  color: whitesmoke;
+  box-shadow: 1px 1px 10.1px #5bc5f5;
+  margin-bottom: 5px;
+  margin-top: 5px;
+  cursor: pointer;
+  border-radius: 5px;
+}
+.main {
+  width: 600px;
+  margin: 50px auto;
+  color: #047aaf;
+}
+h4 {
+  text-align: center;
+  line-height: 40px;
+}
+select {
+  width: 200px;
+  height: 210px;
+  border: 1px solid #0aaef8;
+}
+select:focus-visible {
+  outline: #0aaef8 1px solid;
+}
+select option {
+  height: 28px;
+  padding: 5px;
+  color: #047aaf;
+  display: flex;
+  align-items: center;
+}
+select option:hover {
+  background-color: #0aaef8;
+  color: #fff;
+}
+select option:visited {
+  background-color: red;
+  color: #fff;
+}
+.container {
+  display: flex;
+}
+.center {
+  display: flex;
+  flex-flow: column;
+  align-items: center;
+  justify-content: center;
+  width: 200px;
+  text-align: center;
+  font-size: 14px;
+}
+.user-list {
+  border: #0aaef8 1px solid;
+  width: 100%;
+  margin-top: 50px;
+  text-align: center;
+}
+.user-list td {
+  font-size: 14px;
+}
+.user-list th,
+.user-list td {
+  height: 40px;
+  border-bottom: 1px solid #0aaef8;
+}
+.user-list th:nth-child(1),
+.user-list td:nth-child(1) {
+  border-right: 1px solid #0aaef8;
+  width: 50%;
+}
+.user-list tr:nth-child(1) {
+  background: #0aaef8;
+  color: white;
+}
+.user-list:last-child {
+  border-bottom: none;
+}

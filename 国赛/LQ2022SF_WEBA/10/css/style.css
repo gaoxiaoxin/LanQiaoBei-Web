@@ -1,0 +1,238 @@
+html,
+body {
+  overflow-x: hidden !important;
+  -webkit-font-smoothing: antialiased;
+  min-height: 100%;
+  background: #f1f2f7;
+}
+a {
+  color: #3c8dbc;
+}
+.right-side,
+.left-side {
+  min-height: 100%;
+  display: block;
+}
+
+.right-side {
+  background-color: #f1f2f7;
+  margin-left: 220px;
+}
+.left-side {
+  position: absolute;
+  width: 220px;
+  top: 0;
+}
+
+@media screen and (min-width: 992px) {
+  .left-side {
+    top: 50px;
+  }
+
+  .right-side.strech {
+    margin-left: 0;
+  }
+  .right-side.strech > .content-header {
+    margin-top: 0px;
+  }
+  .left-side.collapse-left {
+    left: -220px;
+  }
+}
+
+.content {
+  padding: 20px 15px;
+  background: #f0f3f4;
+  overflow: auto;
+}
+
+img {
+  max-width: 100% !important;
+}
+
+.badge-success {
+  background-color: #27c24c;
+  color: #dff5e4;
+}
+
+.badge-info {
+  background-color: #23b7e5;
+  color: #e3f6fc;
+}
+.badge-danger {
+  background-color: #f05050;
+  color: #fae6e6;
+}
+
+body > .header .navbar {
+  height: 50px;
+  margin-bottom: 0;
+  margin-left: 220px;
+}
+body > .header .logo {
+  float: left;
+  font-size: 20px;
+  line-height: 50px;
+  text-align: center;
+  padding: 0 10px;
+  width: 220px;
+  font-weight: 500;
+  height: 50px;
+  display: block;
+}
+.user-panel {
+  padding: 10px;
+}
+.user-panel:before,
+.user-panel:after {
+  display: table;
+  content: " ";
+}
+.user-panel:after {
+  clear: both;
+}
+.user-panel > .image > img {
+  width: 45px;
+  height: 45px;
+}
+
+@media screen and (max-width: 992px) {
+  .relative {
+    position: relative;
+  }
+  body.fixed .sidebar-offcanvas {
+    margin-top: 50px;
+    left: -220px;
+  }
+  body.fixed .row-offcanvas-left.active .navbar {
+    left: 220px !important;
+    right: 0;
+  }
+  body.fixed .row-offcanvas-left.active .sidebar-offcanvas {
+    left: 0px;
+  }
+}
+
+.skin-black .navbar {
+  background-color: #ffffff;
+  border-bottom: 1px solid #eee;
+}
+.skin-black .navbar .nav a {
+  color: #333333;
+}
+
+.skin-black .logo {
+  background-color: #283744;
+  color: #f9f9f9;
+}
+.skin-black .logo > a {
+  color: #f9f9f9;
+}
+.skin-black .right-side > .content-header {
+  background: #fff;
+  box-shadow: none;
+}
+.skin-black .user-panel > .image > img {
+  border: 1px solid #444;
+}
+.skin-black .user-panel > .info,
+.skin-black .user-panel > .info > a {
+  color: #eee;
+}
+.skin-black .sidebar {
+  border-bottom: 1px solid #39435c;
+}
+.skin-black .sidebar > .sidebar-menu > li > .treeview-menu {
+  margin: 0 1px;
+  background: #35404d;
+}
+.skin-black .left-side {
+  background: #39435c;
+  padding-top: 20px;
+}
+.skin-black .sidebar a {
+  color: #eee;
+}
+.sm-st {
+  background: #fff;
+  padding: 20px;
+  -webkit-border-radius: 3px;
+  -moz-border-radius: 3px;
+  border-radius: 3px;
+  margin-bottom: 20px;
+  -webkit-box-shadow: 0 1px 0px rgba(0, 0, 0, 0.05);
+  box-shadow: 0 1px 0px rgba(0, 0, 0, 0.05);
+}
+.sm-block-icon {
+  width: 60px;
+  height: 60px;
+  line-height: 60px;
+  text-align: center;
+  font-size: 30px;
+  background: #eee;
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  border-radius: 5px;
+  float: left;
+  margin-right: 10px;
+  color: #fff;
+}
+.sm-block-info {
+  font-size: 12px;
+  padding-top: 2px;
+}
+.sm-block-info span {
+  display: block;
+  font-size: 24px;
+  font-weight: 600;
+}
+.stat-elem {
+  background-color: #fff;
+  padding: 18px;
+  border-radius: 40px;
+}
+
+.stat-info {
+  text-align: center;
+  background-color: #fff;
+  border-radius: 5px;
+  margin-top: -5px;
+  padding: 8px;
+  -webkit-box-shadow: 0 1px 0px rgba(0, 0, 0, 0.05);
+  box-shadow: 0 1px 0px rgba(0, 0, 0, 0.05);
+  font-style: italic;
+}
+
+.stat-icon {
+  text-align: center;
+  margin-bottom: 5px;
+}
+
+.block-red {
+  background-color: #f05050;
+}
+.block-green {
+  background-color: #27c24c;
+}
+.block-violet {
+  background-color: #7266ba;
+}
+.block-blue {
+  background-color: #23b7e5;
+}
+
+#sidebarmenu {
+  margin-top: 20px;
+  line-height: 20px;
+}
+
+#sidebarmenu li {
+  color: #fff;
+  line-height: 40px;
+}
+#sidebarmenu ul {
+  padding: 0 20px;
+}
+.pull-left.info {
+  margin-left: 20px;
+}

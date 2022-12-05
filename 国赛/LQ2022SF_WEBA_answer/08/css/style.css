@@ -1,0 +1,125 @@
+* {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  list-style: none;
+  text-decoration: none;
+  color: inherit;
+  font-weight: normal;
+  font-family: "微软雅黑";
+  box-sizing: border-box;
+  font-style: normal;
+  outline: none;
+  -webkit-tap-highlight-color: transparent;
+}
+
+body {
+  width: 100%;
+  overflow-x: hidden;
+  background: #f8f8f8;
+}
+.top-bar {
+  width: 100%;
+  text-align: center;
+  position: relative;
+  font-size: 24px;
+  color: #333333;
+  padding: 8px 0;
+}
+.container {
+  width: 100%;
+  padding: 0 0.25rem 1rem 0.25rem;
+}
+
+/* 月份 */
+
+.month {
+  width: 100%;
+  height: auto;
+  overflow: hidden;
+  padding: 0.4rem 0;
+}
+
+.month ul {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.month ul li {
+  font-size: 16px;
+  color: #999999;
+  text-align: center;
+  width: 60px;
+  margin: 0 0.2rem;
+  cursor: pointer;
+}
+
+.month ul li.active {
+  color: #ff6600;
+  padding: 10px;
+  background: #fff1e5;
+  border-radius: 5px;
+}
+
+.chart {
+  width: 100%;
+  height: auto;
+  overflow: hidden;
+  background: #ffffff;
+  padding: 0.35rem 0.3rem;
+  margin-top: 0.4rem;
+  border-radius: 0.2rem;
+}
+
+.chart .title {
+  width: 100%;
+  height: auto;
+  overflow: hidden;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.chart .title h3 {
+  font-size: 20px;
+  color: #333333;
+  font-weight: bold;
+}
+
+.chart .title .type {
+  display: flex;
+  align-items: center;
+}
+
+.chart .title .type span {
+  width: 60px;
+  height: 30px;
+  line-height: 30px;
+  text-align: center;
+  font-size: 16px;
+  color: #bcbcbc;
+  background: #f7f7f7;
+  cursor: pointer;
+}
+
+.chart .title .type span.active {
+  color: #ff6600;
+  background: #fff1e5;
+  border-radius: 5px;
+}
+
+.chart .title .type span:first-child {
+  border-radius: 0.1rem 0 0 0.1rem;
+}
+
+.chart .title .type span:last-child {
+  border-radius: 0 0.1rem 0.1rem 0;
+}
+
+.chart #chart {
+  width: 1000px;
+  height: 600px;
+  margin: 0 auto;
+}

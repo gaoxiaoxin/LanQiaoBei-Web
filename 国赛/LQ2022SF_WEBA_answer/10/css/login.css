@@ -1,0 +1,175 @@
+body {
+  font-family: Verdana;
+  background: url("../images/bg.jpg") no-repeat 62% 34%;
+  background-size: cover;
+  text-align: center;
+}
+
+.container h2 {
+  color: #fff;
+  font-size: 29px;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  padding-bottom: 15px;
+}
+
+.container {
+  width: 25%;
+  margin: 0 auto;
+  background: rgba(0, 0, 0, 0.34);
+  padding: 42px 35px;
+}
+
+.main {
+  margin-top: 100px;
+}
+
+input[type="text"],
+input[type="password"] {
+  width: 88%;
+  padding: 15px 0px 15px 42px;
+  border: 1px solid #fff;
+  outline: none;
+  font-size: 14px;
+  color: #fff;
+  margin: 14px 0px;
+}
+
+input[type="text"] {
+  background: url("../images/user.svg") no-repeat 10px 11px;
+  background-size: 24px;
+}
+
+input[type="password"] {
+  background: url("../images/key.svg") no-repeat 8px 9px;
+  background-size: 28px;
+}
+
+.container span {
+  font-size: 16px;
+  color: #fff;
+  float: left;
+  width: 32%;
+  margin-top: 8px;
+}
+
+.container h6 {
+  font-size: 16px;
+  float: right;
+  width: 37%;
+  color: #fff;
+  letter-spacing: 1px;
+  margin-top: 8px;
+  text-decoration: underline;
+}
+
+.container a {
+  color: #fff;
+  transition: 0.5s all;
+  -webkit-transition: 0.5s all;
+  -o-transition: 0.5s all;
+  -moz-transition: 0.5s all;
+  -ms-transition: 0.5s all;
+}
+
+.container a:hover {
+  color: rgba(208, 95, 216, 0.9);
+  transition: 0.5s all;
+  -webkit-transition: 0.5s all;
+  -o-transition: 0.5s all;
+  -moz-transition: 0.5s all;
+  -ms-transition: 0.5s all;
+}
+.clear {
+  clear: both;
+}
+input[type="submit"] {
+  padding: 12px 38px;
+  font-size: 1px;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  background: #003b64;
+  color: white;
+  border: none;
+  outline: none;
+  cursor: pointer;
+
+  margin: 45px auto 31px;
+  transition: 0.5s all;
+  -webkit-transition: 0.5s all;
+  -o-transition: 0.5s all;
+  -moz-transition: 0.5s all;
+  -ms-transition: 0.5s all;
+}
+
+input[type="submit"]:hover {
+  background: rgba(213, 38, 133, 0.64);
+  transition: 0.5s all;
+  -webkit-transition: 0.5s all;
+  -o-transition: 0.5s all;
+  -moz-transition: 0.5s all;
+  -ms-transition: 0.5s all;
+}
+
+.container p a {
+  text-transform: uppercase;
+  font-size: 18px;
+  text-decoration: underline;
+  letter-spacing: 1px;
+  color: #fff;
+  padding: 10px;
+}
+
+.container p {
+  font-size: 17px;
+  color: #fff;
+}
+
+footer p {
+  margin: 4em 0em;
+  color: #fff;
+  font-size: 15px;
+  font-weight: 300;
+  letter-spacing: 2px;
+}
+
+footer a {
+  color: rgba(208, 95, 216, 0.9);
+}
+
+footer a:hover {
+  color: rgba(19, 129, 206, 0.82);
+  text-decoration: underline;
+}
+
+@media (max-width: 1440px) {
+  .container {
+    width: 28%;
+  }
+}
+
+@media (max-width: 1366px) {
+  .container {
+    width: 30%;
+  }
+}
+
+@media (max-width: 1280px) {
+  .container {
+    width: 33%;
+  }
+
+  .agileheader h1 {
+    font-size: 41px;
+  }
+
+  .container h2 {
+    font-size: 27px;
+  }
+}
+
+@media (max-width: 1080px) {
+  .container {
+    width: 49%;
+  }
+}

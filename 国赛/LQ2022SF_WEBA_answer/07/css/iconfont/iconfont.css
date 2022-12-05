@@ -1,0 +1,42 @@
+@font-face {
+  font-family: "iconfont"; /* Project id 3213277 */
+  src: url("iconfont.woff2?t=1646204410140") format("woff2"),
+    url("iconfont.woff?t=1646204410140") format("woff"),
+    url("iconfont.ttf?t=1646204410140") format("truetype");
+}
+
+.iconfont {
+  font-family: "iconfont" !important;
+  font-size: 16px;
+  font-style: normal;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.icon-user:before {
+  content: "\e8c8";
+}
+
+.icon-microphone:before {
+  content: "\e65f";
+}
+
+.icon-retract:before {
+  content: "\e72f";
+}
+
+.icon-left-arrow:before {
+  content: "\e600";
+}
+
+.icon-list:before {
+  content: "\ec7e";
+}
+
+.icon-dialog:before {
+  content: "\e990";
+}
+
+.icon-close:before {
+  content: "\e633";
+}

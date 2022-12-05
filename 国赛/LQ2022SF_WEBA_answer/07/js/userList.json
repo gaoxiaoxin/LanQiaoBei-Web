@@ -1,0 +1,14 @@
+[
+  {
+    "id": "1",
+    "name": "Tom",
+    "imgPath": "./images/header1.png",
+    "isHost": true
+  },
+  {
+    "id": "2",
+    "name": "Lily",
+    "imgPath": "./images/header2.png",
+    "isHost": false
+  }
+]

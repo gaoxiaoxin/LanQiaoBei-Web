@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8" />
+  <title>一起会议吧</title>
+  <link rel="stylesheet" type="text/css" href="./css/index.css" />
+  <link rel="stylesheet" href="./css/iconfont/iconfont.css" />
+</head>
+
+<body>
+  <div id="app">
+    <!-- TODO：请在下面实现需求 -->
+    <!-- 登录/注销窗口 -->
+    <div class="login">
+      <div class="left-tools">
+        <a class="close-btn"></a>
+        <a class="shrink-btn"></a>
+      </div>
+      <h3>登录</h3>
+      <p v-if="!isLogin">
+        选择用户：
+        <select id="selectUser" @change="selectUser" v-model="selected">
+          <option :value="index" v-for="(item, index) in userList">{{item.name}}</option>
+        </select>
+      </p>
+      <p v-else>当前用户为：{{user}}</p>
+
+      <a class="login-btn" @click="login">{{isLogin ? '注销' :'登录' }}</a>
+    </div>
+
+    <!-- 右侧显示用户列表窗口按钮 -->
+    <button id="show" class="right-btn" @click="showTool = true" v-if="!showTool && isLogin">
+      <span class="iconfont icon-left-arrow"></span>
+    </button>
+
+    <!-- 用户列表窗口 -->
+    <div class="user-dialog" v-if="showTool">
+      <!-- 用户列表窗口上侧工具栏 -->
+      <ul class="tools">
+        <li class="tools-left">
+          <button :class="[active == 0 ? 'active' : '' ]" @click="activeTab(0)">
+            <span class=" iconfont icon-close"></span>
+          </button>
+          <button :class="[active == 1 ?  'active' : '' ]" @click="activeTab(1)">
+            <span class=" iconfont icon-dialog"></span>
+          </button>
+          <button :class="[active == 2 ? 'active' : '' ]" @click="activeTab(2)">
+            <span class=" iconfont icon-list"></span>
+          </button>
+        </li>
+        <li class="tools-right" @click="showTool = false">
+          <button class="show-list">
+            <span class="iconfont icon-retract"></span>
+          </button>
+        </li>
+      </ul>
+
+      <!-- 用户列表 -->
+      <ul class="say-list">
+        <li>
+          <span class="iconfont icon-microphone"></span>
+        </li>
+        <li class="line"></li>
+        <li>正在讲话：Tom；</li>
+      </ul>
+      <ul class="user-list">
+        <li v-for="(item, index) in userList" :key="index">
+          <img class="header" :src="item.imgPath" />
+          <div class="user-name">
+            <span :class="['iconfont', item.isHost ? 'icon-user header-icon':'']"></span>
+            <span class="iconfont icon-microphone"></span>
+            {{item.name}}
+          </div>
+        </li>
+      </ul>
+    </div>
+  </div>
+  <script type="text/javascript" src="./js/vue.js"></script>
+  <script type="text/javascript" src="./js/axios.min.js"></script>
+  <script type="text/javascript">
+    // TODO：请在下面实现需求
+    new Vue({
+      el: "#app",
+      data() {
+        return {
+          user: "Tom",
+          userList: [],
+          isLogin: false,
+          selected: 0,
+          showTool: false,
+          active: 2
+        }
+      },
+      methods: {
+        async getData() {
+          const {
+            data: res
+          } = await axios.get("./js/userList.json");
+          this.userList = res
+          return res;
+        },
+        login() {
+          this.showTool = !this.isLogin
+          this.isLogin = !this.isLogin;
+          this.userList = [...this.userList.splice(this.selected, 1), ...this.userList];
+        },
+        selectUser(item) {
+          this.user = this.userList[this.selected].name
+        },
+        async activeTab(index) {
+          let userList = await this.getData()
+          this.userList = []
+          this.active = index;
+          switch (index) {
+            case 0: {
+              this.userList = []
+              break
+            }
+            case 1: {
+              this.userList = [...userList.splice(this.selected, 1)];
+              break
+            }
+            case 2: {
+              this.userList = [...userList.splice(this.selected, 1), ...userList];
+              break
+            }
+          }
+        }
+      },
+      created() {
+        this.getData()
+      }
+    });
+  </script>
+</body>
+
+</html>

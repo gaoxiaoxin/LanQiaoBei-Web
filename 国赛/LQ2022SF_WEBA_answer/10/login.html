@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>商城管理系统</title>
+    <meta http-equiv="Content-Type" content="text/html;charset=UTF-8">
+    <link href="css/login.css" rel="stylesheet" type="text/css">
+<body>
+    <div class="main">
+        <div class="container">
+            <h2>立即登录</h2>
+            <input type="text" value="admin" />
+            <input value="PASSWORD" name="Password" type="password" />
+            <span><input type="checkbox" checked />记住我</span>
+            <h6><a href="#">忘记密码?</a></h6>
+            <div class="clear">
+                <input type="submit" onclick="adminLogin()" value="管理员登录">
+                <input type="submit" onclick="superLogin()" value="超级管理员登录">
+            </div>
+            <p>还没有账号?<a href="#">立即注册</a></p>
+        </div>
+    </div>
+    <footer>
+        <p>&copy; 2022 蓝桥杯 | 商城管理系统 <a>bootstrap搭建</a></p>
+    </footer>
+    <script>
+        let adminLogin = () => {
+            window.location.href = "./index.html?name=admin";
+        }
+        let superLogin = () => {
+            window.location.href = "./index.html?name=super";
+        }
+    </script>
+</body>
+
+</html>
